@@ -79,11 +79,11 @@ p {
 }
 
 h1 {
-    font-size: var(--font-thritySix);
+    font-size: var(--font-thirtySix);
     line-height: 3rem;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 1px;
-    font-family: var(--fontTwo);
+    font-family: var(--fontOne);
 }
 
 h2 {
@@ -132,12 +132,13 @@ img {
     background-size: cover;
 }
 
-/*-- HEADER --*/
+
+/*--------HEADER-----------*/
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
     background: var(--red-color);
     color: var(--white-color);
@@ -174,11 +175,10 @@ header{
 .body__container{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     gap: 2rem;
-    padding: 1rem;
     background: var(--grey-color);
-    width: 100vw;
+    width: 100%;
 }
 
 /* --Hero Section-- */
@@ -186,7 +186,8 @@ header{
 .hero__section{
    display: grid;
    place-items: center; 
-   margin-top: 3rem;
+   padding: 3rem;
+   background: var(--white-color);
 }
 
 .hero__img{
@@ -204,20 +205,224 @@ header{
     margin-top: 2rem;
 }
 
+.hero__texts h2{
+    text-transform: uppercase;
+}
+
+.hero__texts h3{
+    margin-top: 2rem;
+}
+
 .icons{
     display: flex;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .bar{
     width: 7rem;
     height: 5px;
-    background: var(--white-color);
+    background: var(--red-color);
     border-radius: 5px;
 }
 
-.fa{
+.fa-star{
     font-size: 2rem !important;
-    color: var(--white-color);
+    color: var(--red-color);
     margin: 0 1.5rem;
+}
+
+.hero__texts p{
+    text-align: center;
+}
+
+/* Goals */
+
+.goals__text{
+    margin: 2rem 0;
+    padding: 0 2rem
+}
+
+.goals__text p{
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+/* Portfolio */
+.portfolio__section{
+    background: var(--white-color);
+    padding: 2rem;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.education, .experience{
+    width: 100%;
+    display: inline-block;
+}
+
+.edu{
+    margin-bottom: 1rem;
+}
+
+.section__title{
+    color: var(--red-color);
+}
+
+.education span p{
+    color: var(--red-color);
+    line-height: 2rem;
+}
+
+.bold__text{
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .flex{
+        flex-direction: row;
+    }
+
+    .education, .experience{
+        width: 48%;
+    }
+    
+}
+
+/* ----Contact Us----- */
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+input{
+    width: 20rem;
+    padding: .75rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--black-color);
+}
+
+textarea{
+    width: 20rem;
+    padding: .75rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    background: none;
+    font-family: var(--fontOne);
+    font-size: var(--font-fourteen);
+}
+
+::placeholder{
+    font-family: var(--fontOne);
+    font-size: var(--font-fourteen);
+}
+
+button{
+    width: 7.5rem;
+    padding: .75rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--red-color);
+    color: var(--white-color);
+}
+
+/* -----Footer----- */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background: var(--white-color);
+}
+
+.social__links{
+    display: inline-flex;
+}
+
+.circle{
+    text-align: center;
+    padding: .7rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--red-color);
+    border-radius: 50%;
+    margin-right: .75rem;
+}
+
+.fa-facebook-f, 
+.fa-instagram,
+.fa-twitter{
+    font-size: 1.25rem !important;
+}
+
+.circle:hover, .circle:focus{
+    background: var(--red-color);
+    color: #fffffd;
+}
+
+
+/* ---------LOGIN PAGE----------- */
+/* ----------------------------- */
+.body__wrapper{
+    background: var(--grey-color);
+    display: grid;
+    grid-template-rows: 100%;
+    height: fit-content;
+}
+
+.login{
+    border: 2px solid var(--red-color);
+    padding: 2rem;
+    background: var(--white-color);
+    margin: 3rem auto;
+    border-radius: 5px;
+    width: 400px;
+    height: fit-content;
+}
+.login h2{
+    text-align: center;
+}
+
+.login__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.body__wrapper footer{
+    height: 5rem;
+}
+
+
+/* ------REGISTER----- */
+
+
+.register{
+    border: 2px solid var(--red-color);
+    padding: 2rem;
+    background: var(--white-color);
+    margin: 3rem auto -10px;
+    border-radius: 5px;
+    width: 400px;
+    height: fit-content;
 }
